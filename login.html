@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Log</title>
+    <script type="text/javascript">
+    function formValidator(){
+        var email = document.getElementById("email");
+        if(emailValidator(email, "Please enter a valid email address")){
+	return true;
+	}
+    return false;
+}
+    function emailValidator(elem, helperMsg){
+	
+	var emailExp = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+	if(elem.value.match(emailExp)){
+		return true;
+	}else{
+		alert(helperMsg);
+		elem.focus();
+		return false;
+	}
+}
+</script>
+    <style>
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Helvetica', sans-serif;
+}
+
+.navbar{
+    background-color: #131313;
+    height: 80;
+    display:flex;
+    justify-content: center;
+    align-items:center;
+    font-size: 1.2rem;
+    position: sticky;
+    top:0;
+    z-index: 999; 
+}
+
+.navbar_container{
+    display:flex;
+    justify-content: space-between;
+    height: 80px;
+    z-index: 1;
+    width: 100%;
+    max-width: 1300px; 
+    margin: 0 auto;
+    padding: 0 50px;
+
+}
+
+#navbar_logo{
+    background-color:green;
+    background-image:linear-gradient(to top, #ff0844 0%, #ffb1ff 100%);
+    background-size: 100%;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 2rem;
+}
+
+.fa-gem{
+    margin-right: 0.5rem;
+}
+
+.navbar_menu{
+    display: flex;
+    align-items: center;
+    list-style: none;
+    text-align: center;
+}
+
+.navbar_items{
+    height: 80px;
+}
+
+.navbar_links{
+    color: white;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    padding: 0 1rem;
+    height: 100%;
+}
+
+.navbar_btn{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    padding: 0 1rem;
+    height: 100%;
+}
+
+.button{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    padding: 10px 20px;
+    height: 100%;
+    width: 100%;
+    border:none;
+    outline: none;
+    border-radius: 4px;
+    background: #f77062;
+    color:#fff;
+}
+
+.button:hover{
+    background: rgb(149, 50, 50);
+    transition: all 0.3s ease;
+}
+
+.navbar_links:hover{
+    background: rgb(149, 50, 50);
+    transition: all 0.3s ease;
+}
+
+#div1{
+    background: linear-gradient(to top, #d22121, #0d0c0c);
+        }
+.container {
+    position: relative;
+    text-align: center;
+}
+
+
+.main-container {
+    width: 360px;
+    height: 420px;
+    top: 70%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    top: 400px;
+    bottom:500px;
+}
+
+h1 {
+    color:#fff;
+    position: relative;
+    font-size: 16px;
+    top: -20px;
+    left: -30px;
+}
+
+p {
+    margin: 0;
+    padding: 10px 7px 2px;
+}
+
+input {
+    margin-bottom: 7px;
+}
+
+.main-container input[type="text"], input[type="password"] {
+    border: none;
+    outline: none;
+    width: 240px;
+    height: 40px;
+    background: #BDBABA;
+    color: #141414;
+    font-size: 16px;
+    border-radius: 20px;
+    text-align: center;
+}
+
+.main-container input[type="submit"] {
+    border: none;
+    outline: none;
+    width: 245px;
+    height: 40px;
+    background: #0c0909;
+    color: #fff;
+    font-size: 16px;
+    border-radius: 20px;
+    text-align: center;
+    margin-bottom: 20px;
+} 
+
+.main-container input[type="submit"]:hover {
+    cursor: pointer;
+    background-color: #3d1112;
+}
+
+form{
+    color:#fff;
+}
+
+
+    </style>
+</head>
+<body>
+    <!--Navbar Section-->
+    <nav class="navbar">
+        <div class="navbar_container">
+             <a href="/" id="navbar_logo">NEXT-GEN FILM SCHOOL</a>
+             <ul class="navbar_menu">
+             <li class="navbar_item">
+                  <a href="/index.html" class="navbar_links">Home</a>
+             </li>
+             <li class="navbar_item">
+                  <a href="/apply.html" class="navbar_links">Apply</a>
+             </li>
+             <li class="navbar_item">
+                  <a href="/courses.html" class="navbar_links">Courses</a>
+             </li>
+             <li class="navbar_item">
+                  <a href="/about.html" class="navbar_links">About</a>
+             </li>
+             <li class="navbar_item">
+                  <a href="/alumni.html" class="navbar_links">Alumni</a>
+             </li>
+             <li class="navbar_item">
+                  <a href="/educationmodel.html" class="navbar_links">Education Model</a>
+             </li>
+             <li class="navbar_btn">
+                  <a href="/signup.html" class="button">Sign up</a>
+             </li>
+             </ul>
+        </div>
+   </nav>
+    <div id="div1" style="height:100vh;">
+        <div class="main-container">
+            <h1 style="font-size: 50px;">Welcome Back</h1>
+            <form onsubmit="return formValidator()" action="index.html">
+                <p>Email Address</p>
+                <input type="text" placeholder="abc@xyz.com" id="email">
+                <p>Password</p>
+                <input type="password" placeholder="Enter Password"><br>
+                <br>
+                <input type="submit" value="login"><br>
+                <p class="signup">
+                    New here? Create an account!
+                </p>
+            </form>
+                <form action="signup.html">
+                <input type="submit" value="Sign Up!">
+            </form>
+        </div>
+    </div>
+</body>
+</html>
